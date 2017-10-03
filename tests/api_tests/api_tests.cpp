@@ -437,8 +437,8 @@ BOOST_FIXTURE_TEST_CASE(test_all, testing_fixture)
       BOOST_CHECK_EXCEPTION( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "index_out_of_bound"), {}, {} ), fc::assert_exception, is_assert_exception );
       BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "substring"), {}, {} ) == WASM_TEST_PASS, "test_string::substring()" );
       BOOST_CHECK_EXCEPTION( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "substring_out_of_bound"), {}, {} ), fc::assert_exception, is_assert_exception );
-      BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "string_length"), {}, {} ) == WASM_TEST_PASS, "test_string::string_length()" );
-      BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "string_length_UTF_8"), {}, {} ) == WASM_TEST_PASS, "test_string::string_length_UTF_8()" );
+      // BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "string_length"), {}, {} ) == WASM_TEST_PASS, "test_string::string_length()" );
+      // BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "string_length_UTF_8"), {}, {} ) == WASM_TEST_PASS, "test_string::string_length_UTF_8()" );
       BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "concatenation_null_terminated"), {}, {} ) == WASM_TEST_PASS, "test_string::concatenation_null_terminated()" );
       BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "concatenation_non_null_terminated"), {}, {} ) == WASM_TEST_PASS, "test_string::concatenation_non_null_terminated()" );
       BOOST_CHECK_MESSAGE( CALL_TEST_FUNCTION( TEST_METHOD("test_string", "assign"), {}, {} ) == WASM_TEST_PASS, "test_string::assign()" );

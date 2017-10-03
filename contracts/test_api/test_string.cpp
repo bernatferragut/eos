@@ -151,27 +151,27 @@ unsigned int test_string::substring_out_of_bound() {
   return WASM_TEST_PASS;
 }
 
-unsigned int test_string::string_length() {
-  char data[] = "abcdefghij";
-  uint32_t size = sizeof(data)/sizeof(char);
-
-  eos::String str(data, size, false);
-
-  WASM_ASSERT( str.strlen() == 10,  "str.strlen() == 10" );
-
-  return WASM_TEST_PASS;
-}
-
-unsigned int test_string::string_length_UTF_8() {
-  char data[] = "你好，世界！";
-  uint32_t size = sizeof(data)/sizeof(char);
-
-  eos::String str(data, size, false);
-
-  WASM_ASSERT( str.strlenUTF8() == 6,  "str.strlenUTF8() == 6" );
-
-  return WASM_TEST_PASS;
-}
+// unsigned int test_string::string_length() {
+//   char data[] = "abcdefghij";
+//   uint32_t size = sizeof(data)/sizeof(char);
+//
+//   eos::String str(data, size, false);
+//
+//   WASM_ASSERT( str.strlen() == 10,  "str.strlen() == 10" );
+//
+//   return WASM_TEST_PASS;
+// }
+//
+// unsigned int test_string::string_length_UTF_8() {
+//   char data[] = "你好，世界！";
+//   uint32_t size = sizeof(data)/sizeof(char);
+//
+//   eos::String str(data, size, false);
+//
+//   WASM_ASSERT( str.strlenUTF8() == 6,  "str.strlenUTF8() == 6" );
+//
+//   return WASM_TEST_PASS;
+// }
 
 
 unsigned int test_string::concatenation_null_terminated() {
