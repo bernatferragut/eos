@@ -88,8 +88,6 @@ extern "C" {
       WASM_TEST_HANDLER(test_string, index_out_of_bound);
       WASM_TEST_HANDLER(test_string, substring);
       WASM_TEST_HANDLER(test_string, substring_out_of_bound);
-      // WASM_TEST_HANDLER(test_string, string_length);
-      // WASM_TEST_HANDLER(test_string, string_length_UTF_8);
       WASM_TEST_HANDLER(test_string, concatenation_null_terminated);
       WASM_TEST_HANDLER(test_string, concatenation_non_null_terminated);
       WASM_TEST_HANDLER(test_string, assign);

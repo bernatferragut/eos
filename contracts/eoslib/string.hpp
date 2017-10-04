@@ -118,44 +118,6 @@ namespace eos {
       return String(data + offset, substr_size, copy);
     }
 
-    // // Count the number of characters in the string
-    // uint32_t strlen() {
-    //   if (size > 0 && *(data + size - 1) == '\0') {
-    //     return size/sizeof(char) - 1;
-    //   } else {
-    //     return size/sizeof(char);
-    //   }
-    // }
-    //
-    // // Count the number of character in the UTF8 string
-    // uint32_t strlenUTF8() {
-    //   uint32_t len = 0;
-    //
-    //   char* iterator = data;
-    //   char* end = data + size;
-    //
-    //   if (size > 0 && *(data + size - 1) == '\0') {
-    //     // Null terminated string
-    //     end = end - 1;
-    //   }
-    //
-    //   while (iterator != end) {
-    //     uint8_t byte = (uint8_t)(*iterator);
-    //     // Valid UTF-8 are
-    //     // 0xxxxxxx
-    //     // 110xxxxx 10xxxxxx
-    //     // 1110xxxx 10xxxxxx 10xxxxxx
-    //     // 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
-    //     // which means 10xxxxxx (0x80 - 0xBF) can't be independent
-    //     if (!(byte >= 0x80 && byte <= 0xBF)) {
-    //       len++;
-    //     }
-    //     iterator++;
-    //   }
-    //   return len;
-    // }
-
-
     char operator [] (const uint32_t index) {
       assert(index < size, "index out of bound");
       return *(data + index);

@@ -136,8 +136,6 @@ struct test_string {
   static unsigned int index_out_of_bound();
   static unsigned int substring();
   static unsigned int substring_out_of_bound();
-  // static unsigned int string_length();
-  // static unsigned int string_length_UTF_8();
   static unsigned int concatenation_null_terminated();
   static unsigned int concatenation_non_null_terminated();
   static unsigned int assign();
