@@ -6,9 +6,11 @@ if( GPERFTOOLS_FOUND )
     list( APPEND PLATFORM_SPECIFIC_LIBS tcmalloc )
 endif()
 
+set( CMAKE_CXX_STANDARD 14 )
+
 file(GLOB UNIT_TESTS "tests/*.cpp")
 add_executable( chain_test ${UNIT_TESTS} ${COMMON_SOURCES} )
-target_link_libraries( chain_test eos_native_contract eos_chain chainbase eos_utilities eos_egenesis_none wallet_plugin fc ${PLATFORM_SPECIFIC_LIBS} )
+target_link_libraries( chain_test eos_native_contract eos_chain chainbase eos_utilities eos_egenesis_none wallet_plugin fc abi_generator ${PLATFORM_SPECIFIC_LIBS} )
 
 if(WASM_TOOLCHAIN)
   file(GLOB SLOW_TESTS "slow_tests/*.cpp")
